@@ -393,6 +393,8 @@ class Openssl(Package):  # Uses Fake Autotools, should subclass Package
         when="@1.1.1q",
     )
 
+    patch('ppc64.patch', when='@:3.0.0')
+
     @classmethod
     def determine_version(cls, exe):
         output = Executable(exe)("version", output=str, error=str)
