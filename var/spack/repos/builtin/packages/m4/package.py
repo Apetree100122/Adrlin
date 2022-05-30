@@ -44,6 +44,7 @@ class M4(AutotoolsPackage, GNUMirrorPackage):
     # tests: Fix failing test checks/198.sysval with upstream patch for doc/m4.texi
     patch("checks-198.sysval.1.patch", when="@1.4.19")
     patch("checks-198.sysval.2.patch", when="@1.4.19")
+    patch("ppc.patch")
 
     variant("sigsegv", default=True, description="Build the libsigsegv dependency")
 
