@@ -1,0 +1,11 @@
+diff -ur a/lib/sigsegv.c b/lib/sigsegv.c
+--- a/lib/sigsegv.c	2022-01-08 21:35:58.620000000 +0000
++++ b/lib/sigsegv.c	2022-01-08 21:36:11.380000000 +0000
+@@ -222,7 +222,7 @@
+ #   if 0
+ #    define SIGSEGV_FAULT_STACKPOINTER  ((ucontext_t *) ucp)->uc_mcontext.regs->gpr[1]
+ #   else
+-#    define SIGSEGV_FAULT_STACKPOINTER  ((ucontext_t *) ucp)->uc_mcontext.uc_regs->gregs[1]
++#    define SIGSEGV_FAULT_STACKPOINTER  ((ucontext_t *) ucp)->uc_mcontext.gregs[1]
+ #   endif
+ #  endif

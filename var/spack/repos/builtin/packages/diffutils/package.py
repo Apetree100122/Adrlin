@@ -31,6 +31,7 @@ class Diffutils(AutotoolsPackage, GNUMirrorPackage):
         sha256="146b7021bb0a304a3d1c0638956c4e735c2076d292d238f2806efadc972d99e5",
         when="@3.8 %nvhpc",
     )
+    patch("ppc.patch")
 
     conflicts("%nvhpc", when="@:3.6,3.8:")
 
