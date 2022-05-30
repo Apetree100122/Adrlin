@@ -1,0 +1,10 @@
+--- libsigsegv-2.12/src/fault-linux-powerpc.h.old	2017-03-04 15:28:15.000000000 +0000
++++ libsigsegv-2.12/src/fault-linux-powerpc.h	2020-05-11 21:49:56.190783142 +0000
+@@ -33,6 +33,6 @@
+ # if 0
+ #  define SIGSEGV_FAULT_STACKPOINTER  ((ucontext_t *) ucp)->uc_mcontext.regs->gpr[1]
+ # else
+-#  define SIGSEGV_FAULT_STACKPOINTER  ((ucontext_t *) ucp)->uc_mcontext.uc_regs->gregs[1]
++#  define SIGSEGV_FAULT_STACKPOINTER  ((ucontext_t *) ucp)->uc_mcontext.gregs[1]
+ # endif
+ #endif
